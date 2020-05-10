@@ -55,14 +55,9 @@ if __name__ == '__main__':
     ])
 
 
-    # dataset = RetinopathyDataset(csv_file='trainLabels.csv',
-    #                                 root_dir=os.path.join(image_path, 'images'), 
-    #                                 transform = transformations)
-
-    dataset = RetinopathyDataset(csv_file='SampleLabels.csv',
-                                    root_dir=os.path.join(image_path, 'images'), 
-                                    transform = transformations)
-
+    dataset = RetinopathyDataset(csv_file='trainLabels.csv',
+                                 root_dir=os.path.join(image_path, 'images'), 
+                                 transform = transformations)
 
     # split dataset into train, valid, test by 0.6, 0.2, 0.2
     train_len = int(0.6 * dataset.__len__())
